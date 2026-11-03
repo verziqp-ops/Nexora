@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'NEXORA-Android-Project.zip'
+      - 'NEXORA-Android-Project-v1.4.zip'
+      - '.github/workflows/build-apk.yml'
 
 jobs:
   build:
@@ -15,8 +16,8 @@ jobs:
 
       - name: Extract Android project
         run: |
-          test -f NEXORA-Android-Project.zip
-          unzip -o NEXORA-Android-Project.zip -d .
+          test -f NEXORA-Android-Project-v1.4.zip
+          unzip -o NEXORA-Android-Project-v1.4.zip -d .
 
       - name: Set up Java
         uses: actions/setup-java@v4
